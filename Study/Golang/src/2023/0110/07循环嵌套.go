@@ -34,7 +34,21 @@ func main0702() {
 	}
 }
 
-func main() {
+func main0703() {
 	fmt.Println(time.Now())
 	fmt.Println(time.Now().Year())
+}
+
+func main() {
+	// 九九乘法口诀表
+	for i := 1; i <= 9; i++ {
+		for j := 1; j <= 9; j++ {
+			if j > i {
+				// 跳出本次循环
+				continue
+			}
+			fmt.Printf(" %d*%d=%d ", j, i, i*j)
+		}
+		fmt.Println()
+	}
 }
