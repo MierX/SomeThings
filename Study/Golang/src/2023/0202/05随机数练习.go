@@ -43,3 +43,26 @@ func main0502() {
 		}
 	}
 }
+
+func main() {
+	// 随机双色球彩票
+	// 红色 1-33 选择6个 不能重复 蓝球 1-16 选择1个 可以和红球重复
+
+	rand.Seed(time.Now().UnixNano())
+	var redArr [6]int
+	for i := 0; i < len(redArr); i++ {
+		redArr[i] = rand.Intn(33) + 1
+		for j := 0; j < i; j++ {
+			// 数据重复
+			if redArr[i] == redArr[j] {
+				redArr[i] = rand.Intn(33) + 1
+
+				// 将j赋值为-1是因为循环结束时，j会+1
+				j = -1
+			}
+		}
+	}
+	blue := rand.Intn(16) + 1
+	fmt.Println(redArr)
+	fmt.Println(blue)
+}
