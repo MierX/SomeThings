@@ -47,7 +47,7 @@ func main0304() {
 	fmt.Println(str2)
 }
 
-func main() {
+func main0305() {
 	str1 := "hello world! world"
 	str2 := "china"
 
@@ -56,4 +56,28 @@ func main() {
 	// 如果替换次数小于0 则表示将所有匹配的部分都替换
 	str3 := strings.Replace(str1, "world", str2, 1)
 	fmt.Println(str3)
+}
+
+func main0306() {
+	str1 := "130-0199-1433"
+	// 将字符串根据指定的字符串进行分割，分割后变成切片 第一个参数是被分割的字符串 第二个参数是指定的分隔符字符串
+	slice := strings.Split(str1, "-")
+	fmt.Println(slice)
+}
+
+func main0307() {
+	str := "   a  b  c   "
+	// 去掉字符串中头尾指定的字符串内容
+	str1 := strings.Trim(str, " ")
+	fmt.Println(str1)
+}
+
+func main() {
+	str := "   a   b  c   "
+	// 去掉字符串中的空格，再按照空格切片 一般用于统计单词个数
+	slice := strings.Fields(str)
+	fmt.Println(slice)
+	for _, v := range slice {
+		fmt.Println(v)
+	}
 }
