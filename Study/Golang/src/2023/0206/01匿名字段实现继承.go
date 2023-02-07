@@ -45,8 +45,8 @@ func main() {
 	var stu = Student{Person{1001, "东方不败", 35, "不详"}, 2002, 302, 100}
 	fmt.Printf("姓名：%s\n", stu.name)
 	fmt.Printf("性别：%s\n", stu.sex)
-	fmt.Printf("：%d\n", stu.age)
-	fmt.Printf("姓名：%d\n", stu.id)
-	fmt.Printf("姓名：%d\n", stu.class)
-	fmt.Printf("姓名：%d\n", stu.score)
+	fmt.Printf("年龄：%d\n", stu.age)
+	fmt.Printf("编号：%d\n", stu.id)
+	fmt.Printf("班级：%d\n", stu.class)
+	fmt.Printf("份数：%d\n", stu.score)
 }
