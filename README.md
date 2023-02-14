@@ -1,2 +1,1 @@
 # SomeThings
-SomeThings
