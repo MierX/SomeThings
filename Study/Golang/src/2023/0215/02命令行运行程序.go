@@ -10,5 +10,5 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("你好")
+	fmt.Println("命令行运行程序方法：go build 02命令行运行程序.go")
 }
