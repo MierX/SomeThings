@@ -22,4 +22,8 @@ func MyFunc12(a, b int) (max, min int) {
 
 func main() {
 	fmt.Println(MyFunc12(12, 20))
+
+	//通过匿名变量丢弃某个返回值
+	a, _ := MyFunc12(12, 20)
+	fmt.Println(a)
 }
